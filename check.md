@@ -782,3 +782,185 @@ Or I am stupid or this function makes no sense, why on earth would you use % to 
 
 ---
 
+https://pkg.go.dev/context@go1.26.2#example-AfterFunc-Connection
+
+stopc should be stopC?
+
+---
+
+https://pkg.go.dev/context@go1.26.2#example-WithCancel
+
+generated integers not to leak
+
+Grammar
+
+---
+
+https://pkg.go.dev/context@go1.26.2#WithTimeout
+
+Make this a proper example that can be run
+
+---
+
+https://pkg.go.dev/crypto/cipher@go1.26.2#StreamReader.Read
+
+No comment??
+
+---
+
+https://pkg.go.dev/crypto/ecdsa@go1.26.2#PublicKey.Equal
+
+elliptic.P256().Params()
+
+Add link
+
+---
+
+https://pkg.go.dev/crypto/ed25519@go1.26.2#example-package-Ed25519ctx
+
+Make it a runnable example
+
+---
+
+https://pkg.go.dev/crypto/hkdf@go1.26.2#example-package-Usage
+
+Modernize for to use range
+
+---
+
+https://pkg.go.dev/crypto/hpke@go1.26.2#example-package
+
+Make a proper example, I do not understand this code
+
+---
+
+https://pkg.go.dev/crypto/rand@go1.26.2#Int
+
+Compare with prime, in prime the reader is ignored, why not in int?
+
+---
+
+https://pkg.go.dev/crypto/rand@go1.26.2#example-Read
+
+How do this work? The key is not passed as a pointer, but it is changed by read
+
+---
+
+https://pkg.go.dev/crypto/rsa@go1.26.2#example-SignPKCS1v15
+
+Update recommended hash and date?
+
+---
+
+https://pkg.go.dev/crypto/sha256@go1.26.2#example-New-File
+
+Update example to operate over an existing file, either create it in the example itself or add it as part of the testing files
+
+---
+
+https://pkg.go.dev/crypto/sha256@go1.26.2#Sum256
+
+What is the difference with New()?
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#LoadX509KeyPair
+
+This should accept a filepath instead of strings, check the example for windows
+
+And the example error, file not found
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#example-X509KeyPair-HttpServer
+
+This example go apeshit when run
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#CertificateVerificationError.Unwrap
+
+What do this do?
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#ClientAuthType
+
+RequireAndVerifyClientCert
+
+Why would you use anything but this?
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#ClientAuthType.String
+
+Why do this exist? Should zuse strings. Iota
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#ClientHelloInfo
+
+Do not read
+	// from, or write to, this connection; that will cause the TLS
+	// connection to fail.
+
+Do the LSP or compiler error for this? 
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#Config
+
+best element of Certificates will be used.
+
+What is best?
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#Config
+
+Tls. Config. CipherSuites
+
+How do you check the default
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#Config.DecryptTicket
+
+Why do it return a nil error upon failing to decrypt?
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#Conn.HandshakeContext
+
+Once the handshake has completed, cancellation of the context will not affect the connection.
+
+Why bother with the context then?
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#QUICEventKind
+
+rejected 0-RTT data even
+	// if we offered it
+
+"We" is the client? Better change that
+
+---
+
+https://pkg.go.dev/crypto/tls@go1.26.2#SessionState
+
+The application may set this to false if it is true to
+	// decline to offer 0-RTT even if supported.
+
+This should be rewroten set false if is is true to decline sounds horrible grammar
+
+---
+
+https://pkg.go.dev/crypto/x509@go1.26.2
+
+IETF (RFC 2459/3280/5280)
+
+Add links?
+
+---
+
