@@ -963,4 +963,101 @@ IETF (RFC 2459/3280/5280)
 Add links?
 
 ---
+https://pkg.go.dev/os#File.ReadFrom
 
+Add link to io.ReadFrom
+
+---
+https://pkg.go.dev/bytes@go1.26.3#example-Compare
+
+Improve that example, it tells you nothing.
+
+---
+
+https://pkg.go.dev/bytes@go1.26.3#example-ContainsAny
+
+Improve the output message
+
+---
+
+Change the title of pages in the documentation
+
+fmt package - fmt - Go Packages
+
+To
+
+`[package name] [sub-link] - [source]`
+
+Package name: That is the last part of the name of the package, the one you
+use when you import it.
+
+Sub-link: How is this called? When you press in a index you get the #something,
+use that something.
+
+Source: This is a litle more difficult, a lot of packages are in github.com/user,
+that github.com do not tell you much, you want the user or organization/user,
+but some packages are in someDomain.com/package, then you do care about the domain.
+
+You do not care that it is a package, the website you are visiting is about package
+documentation.
+
+`https://pkg.go.dev/fmt@go1.26.3#Append`
+`fmt Append - pkg.go.dev`
+`fmt Append - go.dev`
+`fmt Append - go`
+
+This is so you can read what the tab is about, instead of reading
+
+`bufio package - bufio - Go Packages`
+`bufio package - bufio - Go Packages`
+`bufio package - bufio - Go Packages`
+`bufio package - bufio - Go Packages`
+
+Each of the tabs is a different index for different variables or functions, but
+i cannot see which one is which.
+
+`bufio NewReader - Go`
+`bufio Reader.ReadSlice - Go`
+`bufio Scanner - Go`
+`bufio pkg-index - Go`
+
+With this I know the package, the index/sub-link, and the owner of the package,
+which can be good if you are comparing the error packages used by different organizations
+they all have the error package, with a function like new, you need the package owner
+to differentiate.
+
+---
+
+https://pkg.go.dev/std
+
+In the docs page, how do Jump to work? in the standard library it do not show io, neither types
+
+---
+
+https://pkg.go.dev/strings@go1.26.3#example-SplitN
+
+Improve example, show one output for each case.
+
+---
+
+Why is this not a LSP error?
+
+If you run it panics.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	messages := make(chan string)
+
+	messages <- "err"
+	select {
+	case msg := <-messages:
+		fmt.Println("received message", msg)
+	default:
+		fmt.Println("no message received")
+	}
+}
+```
